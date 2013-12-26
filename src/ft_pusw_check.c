@@ -6,7 +6,7 @@
 /*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/25 22:28:02 by alexandre         #+#    #+#             */
-/*   Updated: 2013/12/26 15:19:07 by alexandre        ###   ########.fr       */
+/*   Updated: 2013/12/26 16:19:58 by alexandre        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,26 +31,6 @@ int	ft_pusw_search_value(char *value, t_list *lst)
 		}
 	}
 	return (is_found);
-}
-
-int	ft_pusw_get_list_size(t_list *lst)
-{
-	t_list	*next_link;
-	int		nbr_element;
-
-	next_link = NULL;
-	nbr_element = 0;
-	if (lst)
-	{
-		next_link = lst;
-		++nbr_element;
-		while (next_link->next != NULL)
-		{
-			++nbr_element;
-			next_link = next_link->next;
-		}
-	}
-	return (nbr_element);
 }
 
 int	ft_pusw_is_sort(t_list *lst)

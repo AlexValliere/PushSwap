@@ -6,7 +6,7 @@
 /*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/25 23:08:04 by alexandre         #+#    #+#             */
-/*   Updated: 2013/12/26 14:46:19 by alexandre        ###   ########.fr       */
+/*   Updated: 2013/12/26 16:40:29 by alexandre        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_pusw_op_s(t_list **lst)
 {
 	int	size;
 
-	size = ft_pusw_get_list_size(*lst);
+	size = ft_lstsize(*lst);
 	if (size >= 2)
 		ft_lstswap(&(*lst), &((*lst)->next));
 }
@@ -29,7 +29,7 @@ void	ft_pusw_op_p(t_list **dst, t_list **src)
 
 	//ft_putstr("Call to function ft_pusw_op_p\n");
 	new_elem = NULL;
-	if (ft_pusw_get_list_size(*src) > 0)
+	if (ft_lstsize(*src) > 0)
 	{
 		new_elem = ft_lstnew((*src)->content, (*src)->content_size);
 		//ft_printf("Add new content : %s\n", (*src)->content);
@@ -46,7 +46,14 @@ void	ft_pusw_op_p(t_list **dst, t_list **src)
 			//ft_putstr("Dest is initialized.\nAdding new content to dest.\n");
 			ft_lstadd(&(*dst), new_elem);
 			//ft_printf("New content dest : %s\n", (*dst)->content);
-			ft_lstdelfirst(&(*src));
+			if (ft_lstsize(*src) > 1)
+				ft_lstdelfirst(&(*src));
+			else
+			{
+				ft_memdel(&((*src)->content));
+				(*src)->next = NULL;
+				*src = NULL;
+			}
 			//ft_putstr("Deleting first content of src.\n");
 		}
 	}
@@ -59,7 +66,7 @@ void	ft_pusw_op_r(t_list **lst)
 	t_list	*tmp_list;
 	t_list	*next_link;
 
-	size = ft_pusw_get_list_size(*lst);
+	size = ft_lstsize(*lst);
 	if (size >= 2)
 	{
 		tmp_list = ft_lstnew((*lst)->content, (*lst)->content_size);
@@ -79,7 +86,7 @@ void	ft_pusw_op_rr(t_list **lst)
 	t_list	*tmp_list;
 	t_list	*next_link;
 
-	size = ft_pusw_get_list_size(*lst);
+	size = ft_lstsize(*lst);
 	if (size >= 2)
 	{
 		next_link = *lst;

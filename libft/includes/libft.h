@@ -6,7 +6,7 @@
 /*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/30 14:01:21 by apetit            #+#    #+#             */
-/*   Updated: 2013/12/26 00:29:31 by alexandre        ###   ########.fr       */
+/*   Updated: 2013/12/26 16:20:17 by alexandre        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,5 +97,6 @@ int		ft_printf(const char *format, ...);
 void	ft_putnbr_uint(unsigned int n);
 void	ft_lstswap(t_list **lst_a, t_list **lst_b);
 void	ft_lstdelfirst(t_list **alst);
+int		ft_lstsize(t_list *lst);
 
 #endif

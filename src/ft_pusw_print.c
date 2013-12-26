@@ -6,7 +6,7 @@
 /*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/25 02:54:12 by alexandre         #+#    #+#             */
-/*   Updated: 2013/12/26 15:53:22 by alexandre        ###   ########.fr       */
+/*   Updated: 2013/12/26 15:56:24 by alexandre        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,5 @@ void	ft_pusw_print_l(t_list *lst)
 		}
 	}
 	else
-		ft_putstr("(null)\n");
-	ft_putchar('\n');
+		ft_putstr("(null)");
 }

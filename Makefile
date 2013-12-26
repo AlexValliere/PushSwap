@@ -6,7 +6,7 @@
 #    By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/24 21:56:51 by apetit            #+#    #+#              #
-#    Updated: 2013/12/26 15:09:40 by alexandre        ###   ########.fr        #
+#    Updated: 2013/12/26 16:59:46 by alexandre        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,7 @@ clean:
 			$(RM) $(OBJ)
 
 fclean:		clean
+			cd $(LIBFT_DIR) && $(MAKE) $@
 			$(RM) $(NAME)
 
 re:			fclean all

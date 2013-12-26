@@ -6,7 +6,7 @@
 #    By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/30 14:01:21 by apetit            #+#    #+#              #
-#    Updated: 2013/12/26 00:29:45 by alexandre        ###   ########.fr        #
+#    Updated: 2013/12/26 16:21:12 by alexandre        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ SRC			=	src/ft_abs.c \
 				src/ft_lstadd.c \
 				src/ft_lstiter.c \
 				src/ft_lstswap.c \
+				src/ft_lstsize.c \
 				src/ft_memalloc.c \
 				src/ft_memccpy.c \
 				src/ft_memchr.c \
