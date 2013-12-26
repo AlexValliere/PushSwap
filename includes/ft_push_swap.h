@@ -6,7 +6,7 @@
 /*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/25 02:04:37 by alexandre         #+#    #+#             */
-/*   Updated: 2013/12/26 14:36:51 by alexandre        ###   ########.fr       */
+/*   Updated: 2013/12/26 15:30:01 by alexandre        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@ void	ft_pusw_op_s(t_list **lst);
 void	ft_pusw_op_p(t_list **dst, t_list **src);
 void	ft_pusw_op_r(t_list **lst);
 void	ft_pusw_op_rr(t_list **lst);
+int		ft_pusw_is_sort(t_list *lst);
 
 #endif

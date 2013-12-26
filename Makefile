@@ -6,7 +6,7 @@
 #    By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/24 21:56:51 by apetit            #+#    #+#              #
-#    Updated: 2013/12/25 23:23:56 by alexandre        ###   ########.fr        #
+#    Updated: 2013/12/26 15:09:40 by alexandre        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ NAME		= push_swap
 SRC			=	src/ft_pusw_check.c \
 				src/ft_pusw_ops_pt1.c \
 				src/ft_pusw_print.c \
+				src/ft_pusw_sort.c \
 				src/ft_pusw_store.c \
 				src/push_swap.c
 
