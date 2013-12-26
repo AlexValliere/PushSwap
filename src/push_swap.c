@@ -6,7 +6,7 @@
 /*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/25 01:02:30 by alexandre         #+#    #+#             */
-/*   Updated: 2013/12/26 01:26:21 by alexandre        ###   ########.fr       */
+/*   Updated: 2013/12/26 14:04:47 by alexandre        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,6 @@ int main(int argc, char const *argv[])
 		ft_putstr("\nContenu de l_b :\n");
 		ft_pusw_print_l(l_b);
 		ft_putchar('\n');
-		ft_printf("First content of l_a : %s\n", l_a->content);
-		ft_printf("First content of l_b : %s\n", l_b->content);
 	}
 	else
 		error = 1;
