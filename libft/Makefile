@@ -6,7 +6,7 @@
 #    By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/30 14:01:21 by apetit            #+#    #+#              #
-#    Updated: 2013/12/25 03:16:57 by alexandre        ###   ########.fr        #
+#    Updated: 2013/12/26 00:29:45 by alexandre        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,9 +25,11 @@ SRC			=	src/ft_abs.c \
 				src/ft_itoa.c \
 				src/ft_lstnew.c \
 				src/ft_lstdelone.c \
+				src/ft_lstdelfirst.c \
 				src/ft_lstdel.c \
 				src/ft_lstadd.c \
 				src/ft_lstiter.c \
+				src/ft_lstswap.c \
 				src/ft_memalloc.c \
 				src/ft_memccpy.c \
 				src/ft_memchr.c \
@@ -36,6 +38,17 @@ SRC			=	src/ft_abs.c \
 				src/ft_memdel.c \
 				src/ft_memmove.c \
 				src/ft_memset.c \
+				src/ft_printf.c \
+				src/ft_putchar.c \
+				src/ft_putstr.c \
+				src/ft_putendl.c \
+				src/ft_putnbr.c \
+				src/ft_putchar_fd.c \
+				src/ft_putstr_fd.c \
+				src/ft_putendl_fd.c \
+				src/ft_putnbr_fd.c \
+				src/ft_putnbr_hexa.c \
+				src/ft_putnbr_uint.c \
 				src/ft_realloc.c \
 				src/ft_strcat.c \
 				src/ft_strchr.c \
@@ -66,15 +79,6 @@ SRC			=	src/ft_abs.c \
 				src/ft_strsplit.c \
 				src/ft_tolower.c \
 				src/ft_toupper.c \
-				src/ft_putchar.c \
-				src/ft_putstr.c \
-				src/ft_putendl.c \
-				src/ft_putnbr.c \
-				src/ft_putchar_fd.c \
-				src/ft_putstr_fd.c \
-				src/ft_putendl_fd.c \
-				src/ft_putnbr_fd.c \
-				src/ft_putnbr_hexa.c \
 				src/get_next_line.c
 
 OBJ			= $(SRC:.c=.o)

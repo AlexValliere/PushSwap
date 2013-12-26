@@ -6,7 +6,7 @@
 /*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/30 14:01:21 by apetit            #+#    #+#             */
-/*   Updated: 2013/12/25 03:30:24 by alexandre        ###   ########.fr       */
+/*   Updated: 2013/12/26 00:29:31 by alexandre        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 
 # define BUFF_SIZE 1
+# define HEXA_BASE_MIN "0123456789abcdef"
+# define HEXA_BASE_CAP "0123456789ABCDEF"
 
 # include <string.h>
 
@@ -91,5 +93,9 @@ char	*ft_strrev(char *str);
 int		ft_abs(int nb);
 int		get_next_line(int const fd, char ** line);
 int		ft_is_int(char const *str);
+int		ft_printf(const char *format, ...);
+void	ft_putnbr_uint(unsigned int n);
+void	ft_lstswap(t_list **lst_a, t_list **lst_b);
+void	ft_lstdelfirst(t_list **alst);
 
 #endif

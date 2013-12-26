@@ -6,7 +6,7 @@
 /*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/25 02:54:12 by alexandre         #+#    #+#             */
-/*   Updated: 2013/12/25 03:00:16 by alexandre        ###   ########.fr       */
+/*   Updated: 2013/12/26 01:17:37 by alexandre        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,10 @@ void	ft_pusw_print_l(t_list *lst)
 		next_link = lst;
 		while (next_link->next != NULL)
 		{
-			ft_putnbr(ft_atoi(next_link->content));
-			ft_putchar('\n');
+			ft_printf("%s\n", next_link->content);
 			next_link = next_link->next;
 		}
 	}
+	else
+		ft_putstr("(null)\n");
 }
