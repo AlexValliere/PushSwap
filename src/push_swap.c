@@ -6,7 +6,7 @@
 /*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/25 01:02:30 by alexandre         #+#    #+#             */
-/*   Updated: 2013/12/26 15:33:04 by alexandre        ###   ########.fr       */
+/*   Updated: 2013/12/26 15:51:30 by alexandre        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,13 @@ int main(int argc, char const *argv[])
 			argc--;
 		}
 		ft_printf("l_a sorted : %d\n", ft_pusw_is_sort(l_a));
+		ft_pusw_sort_1(&l_a, &l_b);
 		//ft_putstr("\nContenu de l_a :\n");
 		//ft_pusw_print_l(l_a);
 		//ft_putstr("\nContenu de l_b :\n");
 		//ft_pusw_print_l(l_b);
 		//ft_putchar('\n');
-		ft_pusw_op_p(&l_b, &l_a);
+		//ft_pusw_op_p(&l_b, &l_a);
 		//ft_pusw_op_r(&l_a);
 		//ft_pusw_op_rr(&l_a);
 		//ft_pusw_op_p(&l_b, &l_a);
