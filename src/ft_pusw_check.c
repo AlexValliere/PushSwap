@@ -6,7 +6,7 @@
 /*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/25 22:28:02 by alexandre         #+#    #+#             */
-/*   Updated: 2013/12/26 16:19:58 by alexandre        ###   ########.fr       */
+/*   Updated: 2013/12/26 17:09:22 by alexandre        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	ft_pusw_is_sort(t_list *lst)
 		next_link = lst;
 		while (next_link->next != NULL && is_sort == 1)
 		{
-			if (ft_strcmp(next_link->content, next_link->next->content) > 0)
+			if (ft_atoi(next_link->content) > ft_atoi(next_link->next->content))
 				is_sort = 0;
 			next_link = next_link->next;
 		}

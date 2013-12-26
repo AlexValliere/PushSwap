@@ -6,7 +6,7 @@
 /*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/26 15:09:11 by alexandre         #+#    #+#             */
-/*   Updated: 2013/12/26 16:43:52 by alexandre        ###   ########.fr       */
+/*   Updated: 2013/12/26 17:08:02 by alexandre        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	ft_pusw_sort_1_first_elt_of_l_a(t_list **l_a, t_list **l_b)
 	{
 		if ((*l_a)->next != NULL)
 		{
-			if (ft_strcmp((*l_a)->content, (*l_a)->next->content) > 0)
+			if (ft_atoi((*l_a)->content) > ft_atoi((*l_a)->next->content))
 			{
 				ft_pusw_op_s(&(*l_a));
 				ft_pusw_print_l(*l_a);
@@ -27,7 +27,6 @@ static void	ft_pusw_sort_1_first_elt_of_l_a(t_list **l_a, t_list **l_b)
 				ft_pusw_print_l(*l_b);
 				ft_putstr(" [sa]\n");
 			}
-			ft_printf("Comparaison between %s and %s : %d\n", (*l_a)->content, (*l_a)->next->content, ft_strcmp((*l_a)->content, (*l_a)->next->content));
 		}
 		ft_pusw_op_p(&(*l_b), &(*l_a));
 		ft_pusw_print_l(*l_a);
