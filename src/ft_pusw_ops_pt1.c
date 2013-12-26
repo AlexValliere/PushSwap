@@ -6,7 +6,7 @@
 /*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/25 23:08:04 by alexandre         #+#    #+#             */
-/*   Updated: 2013/12/26 01:16:16 by alexandre        ###   ########.fr       */
+/*   Updated: 2013/12/26 14:46:19 by alexandre        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,33 +27,68 @@ void	ft_pusw_op_p(t_list **dst, t_list **src)
 {
 	t_list	*new_elem;
 
-	ft_putstr("Call to function ft_pusw_op_p\n");
+	//ft_putstr("Call to function ft_pusw_op_p\n");
 	new_elem = NULL;
 	if (ft_pusw_get_list_size(*src) > 0)
 	{
 		new_elem = ft_lstnew((*src)->content, (*src)->content_size);
-		ft_printf("Add new content : %s\n", (*src)->content);
+		//ft_printf("Add new content : %s\n", (*src)->content);
 		if (*dst == NULL)
 		{
-			ft_putstr("Dest is not initialized : creating dest.\n");
-			*dst = malloc(sizeof(t_list));
-			ft_putstr("Adding new content to dest.\n");
-			(*dst)->content = malloc((*src)->content_size);
-			ft_memcpy((*dst)->content, (*src)->content, (*src)->content_size);
-			(*dst)->content_size = (*src)->content_size;
-			(*dst)->next = NULL;
-			ft_printf("New content dest : %s\n", (*dst)->content);
-			ft_putstr("Deleting first content of src.\n");
+			//ft_putstr("Dest is not initialized : creating dest.\n");
+			*dst = new_elem;
+			//ft_printf("New content dest : %s\n", (*dst)->content);
+			//ft_putstr("Deleting first content of src.\n");
 			ft_lstdelfirst(&(*src));
 		}
 		else
 		{
-			ft_putstr("Dest is initialized.\nAdding new content to dest.\n");
+			//ft_putstr("Dest is initialized.\nAdding new content to dest.\n");
 			ft_lstadd(&(*dst), new_elem);
-			ft_printf("New content dest : %s\n", (*dst)->content);
+			//ft_printf("New content dest : %s\n", (*dst)->content);
 			ft_lstdelfirst(&(*src));
-			ft_putstr("Deleting first content of src.\n");
+			//ft_putstr("Deleting first content of src.\n");
 		}
 	}
-	ft_putchar('\n');
+	//ft_putchar('\n');
+}
+
+void	ft_pusw_op_r(t_list **lst)
+{
+	int		size;
+	t_list	*tmp_list;
+	t_list	*next_link;
+
+	size = ft_pusw_get_list_size(*lst);
+	if (size >= 2)
+	{
+		tmp_list = ft_lstnew((*lst)->content, (*lst)->content_size);
+		ft_memdel(&((*lst)->content));
+		*lst = (*lst)->next;
+		next_link = *lst;
+		while (next_link->next != NULL)
+			next_link = next_link->next;
+		next_link->next = tmp_list;
+		next_link->next->next = NULL;
+	}
+}
+
+void	ft_pusw_op_rr(t_list **lst)
+{
+	int		size;
+	t_list	*tmp_list;
+	t_list	*next_link;
+
+	size = ft_pusw_get_list_size(*lst);
+	if (size >= 2)
+	{
+		next_link = *lst;
+		while (next_link->next != NULL)
+			next_link = next_link->next;
+		tmp_list = ft_lstnew(next_link->content, next_link->content_size);
+		ft_memdel(&(next_link->content));
+		free(next_link);
+		tmp_list->next = *lst;
+		*lst = tmp_list;
+	}
 }
