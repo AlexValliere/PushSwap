@@ -2,4 +2,4 @@
 make fclean
 make
 chmod +x ./push_swap
-./push_swap 11 0 82 21 6 9
+./push_swap 11 0 -21 6 -i

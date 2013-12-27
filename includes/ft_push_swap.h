@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_push_swap.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
+/*   By: apetit <apetit@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/25 02:04:37 by alexandre         #+#    #+#             */
-/*   Updated: 2013/12/26 16:20:06 by alexandre        ###   ########.fr       */
+/*   Updated: 2013/12/27 15:48:31 by apetit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ void	ft_pusw_op_p(t_list **dst, t_list **src);
 void	ft_pusw_op_r(t_list **lst);
 void	ft_pusw_op_rr(t_list **lst);
 int		ft_pusw_is_sort(t_list *lst);
-void	ft_pusw_sort_1(t_list **l_a, t_list **l_b);
+void	ft_pusw_sort_1(t_list **l_a, t_list **l_b, int opt);
 
 #endif
