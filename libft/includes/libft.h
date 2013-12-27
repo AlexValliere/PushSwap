@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
+/*   By: apetit <apetit@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/30 14:01:21 by apetit            #+#    #+#             */
-/*   Updated: 2013/12/26 16:20:17 by alexandre        ###   ########.fr       */
+/*   Updated: 2013/12/27 16:34:17 by apetit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,6 @@ char	*ft_strrev(char *str);
 int		ft_abs(int nb);
 int		get_next_line(int const fd, char ** line);
 int		ft_is_int(char const *str);
-int		ft_printf(const char *format, ...);
 void	ft_putnbr_uint(unsigned int n);
 void	ft_lstswap(t_list **lst_a, t_list **lst_b);
 void	ft_lstdelfirst(t_list **alst);

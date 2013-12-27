@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+         #
+#    By: apetit <apetit@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/24 21:56:51 by apetit            #+#    #+#              #
-#    Updated: 2013/12/26 16:59:46 by alexandre        ###   ########.fr        #
+#    Updated: 2013/12/27 15:11:02 by apetit           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRC			=	src/ft_pusw_check.c \
 
 OBJ			= $(SRC:.c=.o)
 
-CFLAGS		= -Wall -Werror -Wclobbered -Wempty-body -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-parameter-type -Wold-style-declaration -Woverride-init -Wsign-compare -Wtype-limits -Wuninitialized -Wunused-but-set-parameter
+CFLAGS		= -Wall -Werror -Wextra
 
 LIBFT_DIR	= ./libft
 

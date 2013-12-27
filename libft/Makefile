@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+         #
+#    By: apetit <apetit@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/30 14:01:21 by apetit            #+#    #+#              #
-#    Updated: 2013/12/26 16:21:12 by alexandre        ###   ########.fr        #
+#    Updated: 2013/12/27 16:34:07 by apetit           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,6 @@ SRC			=	src/ft_abs.c \
 				src/ft_memdel.c \
 				src/ft_memmove.c \
 				src/ft_memset.c \
-				src/ft_printf.c \
 				src/ft_putchar.c \
 				src/ft_putstr.c \
 				src/ft_putendl.c \
@@ -84,7 +83,7 @@ SRC			=	src/ft_abs.c \
 
 OBJ			= $(SRC:.c=.o)
 
-CFLAGS		= -Wall -Werror -Wclobbered -Wempty-body -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-parameter-type -Wold-style-declaration -Woverride-init -Wsign-compare -Wtype-limits -Wuninitialized -Wunused-but-set-parameter
+CFLAGS		= -Wall -Werror -Wextra
 
 RM			= rm -rf
 
