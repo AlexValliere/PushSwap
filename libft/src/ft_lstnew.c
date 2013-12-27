@@ -6,7 +6,7 @@
 /*   By: apetit <apetit@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/30 15:41:02 by apetit            #+#    #+#             */
-/*   Updated: 2013/12/08 16:14:52 by apetit           ###   ########.fr       */
+/*   Updated: 2013/12/27 15:20:21 by apetit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	{
 		if (content && content_size > 0)
 		{
-			element->content = malloc(content_size + 1);
+			element->content = malloc(content_size);
 			ft_memcpy(element->content, content, content_size);
 			element->content_size = content_size;
 		}
